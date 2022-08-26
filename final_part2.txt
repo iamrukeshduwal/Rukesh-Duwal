@@ -1,0 +1,330 @@
+from math import modf
+print("____________________________________________")
+print("\t\tProduct List")
+print("____________________________________________")
+print("Product"+"\t\t\t"+ "Symbol"+ "\t\t"+ "Price")
+print("____________________________________________")
+print("Soft Drink"+ "\t\t"+ "s"+ "\t\t"+ "$3.0")
+print("Iced Coffee"+ "\t\t"+ "c"+ "\t\t"+ "$4.0")
+print("Energy Drink"+ "\t\t"+ "e"+ "\t\t"+ "$3.5")
+print("Water"+ "\t\t\t"+ "w"+ "\t\t"+ "$2.0")
+print("Green Tea"+ "\t\t"+ "t"+ "\t\t"+ "$2.5")
+print("____________________________________________")
+    
+count = 0
+count1 = 1
+
+while True:   
+    user_input = input("Please choose the symbol or select \"q\" to quit ")
+  
+    if (user_input =="s"):
+            print("The price of Soft Drink is $3.0")
+            total = 3
+            rem_cent = 0
+            rem_amt = 3
+            while (count1!=0):
+
+                if (total >0):
+                    input_amount = int(input("Please insert a coin of 50c, $1 or $2\n"))
+                    if (input_amount==50): 
+                        input_amount/=100
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(rem_amt)) + " dollar " + str(int(b*100)) +" cent")
+                            rem_amt = total
+                    elif (input_amount == 1):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) +" cent")
+                    elif (input_amount == 2):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if(rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) + " cent")
+                    elif (input_amount >= 3 or input_amount<=0):
+                        print("Only accept 50c, 1 dollar and 2 dollar coin.")
+                    else:
+                        count1 = 1
+                        count = 0
+                        break
+
+                elif (rem_amt <0):
+                        d,c = modf(rem_amt)
+                        if (rem_amt==(-0.5)):
+                            print("Change: " + str(int(d*-100)))
+                            print("Please take the following change: \n" + "1 fifty cent change")
+                        elif (rem_amt == (-1)):
+                            print("Change: " + str(int(c*-1)))
+                            print("Please take the following change: \n" + "1 one dollar")
+                        elif (rem_amt == (-1.5)):
+                            print("Change: $" + str((rem_amt*-1)))
+                            print("Please take the following change: \n 1 one dollar \n" + "1 fifty cent")
+                        count1 = 1
+                        count = 0
+                        break  
+
+                else:
+                    count1 = 0
+                    count = 0
+                    print("You paid the exact amount, Thanks")
+            else:
+                break
+            
+        
+            break 
+                
+                
+                
+                
+                
+                
+                
+    elif (user_input =="c"):
+            print("The price of Iced Coffee is $4.0")
+            total = 4
+            rem_cent = 0
+            rem_amt = 4
+            while (count1!=0):
+
+                if (total >0):
+                    input_amount = int(input("Please insert a coin of 50c, $1 or $2\n"))
+                    if (input_amount==50): 
+                        input_amount/=100
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(rem_amt)) + " dollar " + str(int(b*100)) +" cent")
+                            rem_amt = total
+                    elif (input_amount == 1):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) +" cent")
+                    elif (input_amount == 2):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) + " cent")
+                    elif (input_amount >= 3 or input_amount<=0):
+                        print("Only accept 50c, 1 dollar and 2 dollar coin.")
+                    else:
+                        count1 = 1
+                        count = 0
+                        break
+
+                elif (rem_amt <0):
+                        d,c = modf(rem_amt)
+                        if (rem_amt==(-0.5)):
+                            print("Change: " + str(int(d*-100)))
+                            print("Please take the following change: \n" + "1 fifty cent change")
+                        elif (rem_amt == (-1)):
+                            print("Change: " + str(int(c*-1)))
+                            print("Please take the following change: \n" + "1 one dollar")
+                        elif (rem_amt == (-1.5)):
+                            print("Change: $" + str((rem_amt*-1)))
+                            print("Please take the following change: \n 1 one dollar \n" + "1 fifty cent")
+                        count1 = 1
+                        count = 0
+                        break 
+
+                else:
+                    count1 = 0
+                    count = 0
+                    print("You paid the exact amount, Thanks")
+            else:
+                break
+            
+            break
+            
+            
+            
+    elif (user_input =="e"):
+            print("The price of Energy Drink is $3.5")
+            total = 3.5
+            rem_cent = 0
+            rem_amt = 3.5
+            while (count1!=0):
+
+                if (total >0):
+                    input_amount = int(input("Please insert a coin of 50c, $1 or $2\n"))
+                    if (input_amount==50): 
+                        input_amount/=100
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(rem_amt)) + " dollar " + str(int(b*100)) +" cent")
+                            rem_amt = total
+                    elif (input_amount == 1):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) +" cent")
+                    elif (input_amount == 2):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) + " cent")
+                    elif (input_amount >= 3 or input_amount<=0):
+                        print("Only accept 50c, 1 dollar and 2 dollar coin.")
+                    else:
+                        count1 = 1
+                        count = 0
+                        break
+
+                elif (rem_amt <0):
+                        d,c = modf(rem_amt)
+                        if (rem_amt==(-0.5)):
+                            print("Change: " + str(int(d*-100)))
+                            print("Please take the following change: \n" + "1 fifty cent change")
+                        elif (rem_amt == (-1)):
+                            print("Change: " + str(int(c*-1)))
+                            print("Please take the following change: \n" + "1 one dollar")
+                        elif (rem_amt == (-1.5)):
+                            print("Change: $" + str((rem_amt*-1)))
+                            print("Please take the following change: \n 1 one dollar \n" + "1 fifty cent")
+                        count1 = 1
+                        count = 0
+                        break 
+                else:
+                    count1 = 0
+                    count = 0
+                    print("You paid the exact amount, Thanks")
+            else:
+                break
+                
+            break
+    elif (user_input =="w"):
+            print("The price of Water is $2.0")
+            total = 2
+            rem_cent = 0
+            rem_amt = 2
+            while (count1!=0):
+
+                if (total >0):
+                    input_amount = int(input("Please insert a coin of 50c, $1 or $2\n"))
+                    if (input_amount==50): 
+                        input_amount/=100
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(rem_amt)) + " dollar " + str(int(b*100)) +" cent")
+                            rem_amt = total
+                    elif (input_amount == 1):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) +" cent")
+                    elif (input_amount == 2):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) + " cent")
+                    elif (input_amount >= 3 or input_amount<=0):
+                        print("Only accept 50c, 1 dollar and 2 dollar coin.")
+                    else:
+                        count1 = 1
+                        count = 0
+                        break
+
+                elif (rem_amt <0):
+                        d,c = modf(rem_amt)
+                        if (rem_amt==(-0.5)):
+                            print("Change: " + str(int(d*-100)))
+                            print("Please take the following change: \n" + "1 fifty cent change")
+                        elif (rem_amt == (-1)):
+                            print("Change: " + str(int(c*-1)))
+                            print("Please take the following change: \n" + "1 one dollar")
+                        elif (rem_amt == (-1.5)):
+                            print("Change: $" + str((rem_amt*-1)))
+                            print("Please take the following change: \n 1 one dollar \n" + "1 fifty cent")
+                        count1 = 1
+                        count = 0
+                        break  
+
+                else:
+                    count1 = 0
+                    count = 0
+                    print("You paid the exact amount, Thanks")
+            else:
+                break
+                
+            break
+    elif (user_input =="t"):
+            print("The price of Green Tea is $2.5")
+            total = 2.5
+            rem_cent = 0
+            rem_amt = 2.5
+            while (count1!=0):
+
+                if (total >0):
+                    input_amount = int(input("Please insert a coin of 50c, $1 or $2\n"))
+                    if (input_amount==50): 
+                        input_amount/=100
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(rem_amt)) + " dollar " + str(int(b*100)) +" cent")
+                            rem_amt = total
+                    elif (input_amount == 1):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) +" cent")
+                    elif (input_amount == 2):
+                        rem_amt-=input_amount
+                        b,a = modf(rem_amt)
+                        total = a + b
+                        if (rem_amt>0):
+                            print("The outstanding amount is "+ str(int(a)) + " dollar " + str(int(b*100)) + " cent")
+                    elif (input_amount >= 3 or input_amount<=0):
+                        print("Only accept 50c, 1 dollar and 2 dollar coin.")
+                    else:
+                        count1 = 1
+                        count = 0
+                        break
+
+                elif (rem_amt <0):
+                        d,c = modf(rem_amt)
+                        if (rem_amt==(-0.5)):
+                            print("Change: " + str(int(d*-100)))
+                            print("Please take the following change: \n" + "1 fifty cent change")
+                        elif (rem_amt == (-1)):
+                            print("Change: " + str(int(c*-1)))
+                            print("Please take the following change: \n" + "1 one dollar")
+                        elif (rem_amt == (-1.5)):
+                            print("Change: $" + str((rem_amt*-1)))
+                            print("Please take the following change: \n 1 one dollar \n" + "1 fifty cent")
+                        count1 = 1
+                        count = 0
+                        break  
+
+                else:
+                    count1 = 0
+                    count = 0
+                    print("You paid the exact amount, Thanks")
+            else:
+                break
+                
+            break
+      
+    elif (user_input == "q"):  
+        break  
+
+    else:  
+        print("Invalid Input, Please Try Again!")  
