@@ -1,2 +1,1 @@
-# Rukesh-Duwal
-I am learner 
+Simple Vending Machine Using Python
